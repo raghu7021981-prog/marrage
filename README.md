@@ -1,24 +1,25 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Prasanna ❤️ Mani Wedding</title>
 
 <style>
 body {
     margin:0;
     font-family:'Georgia',serif;
-    overflow-x:hidden;
+    background:linear-gradient(to bottom,#fff5e6,#ffe6e6);
 }
 
-/* LOGIN PAGE */
+/* LOGIN */
 #loginPage {
     height:100vh;
-    background: linear-gradient(135deg, maroon, gold);
     display:flex;
     justify-content:center;
     align-items:center;
+    background:linear-gradient(135deg, maroon, gold);
 }
 
 .login-box {
@@ -31,27 +32,22 @@ body {
 input {
     padding:10px;
     margin:10px;
-    width:200px;
 }
 
 button {
     padding:10px 20px;
     background:maroon;
     color:white;
-    border:none;
-    cursor:pointer;
 }
 
-/* MAIN SITE */
-#mainSite {
-    display:none;
-}
+/* MAIN */
+#mainSite { display:none; }
 
 /* HERO */
 .hero {
     height:100vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(90,15,46,0.8)),
-    url('https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=1600');
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(90,15,46,0.8)),
+    url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1600');
     background-size:cover;
     display:flex;
     flex-direction:column;
@@ -63,10 +59,13 @@ button {
 
 .hero h1 {
     font-size:4rem;
+    text-shadow:0 0 20px gold;
 }
 
-.hero h2 {
-    font-size:2rem;
+/* SECTION */
+section {
+    padding:80px 20px;
+    text-align:center;
 }
 
 /* COUPLE */
@@ -80,11 +79,17 @@ button {
 .message {
     max-width:800px;
     margin:auto;
-    background:#fff;
+    background:white;
     padding:40px;
     border-radius:20px;
-    font-size:20px;
     line-height:1.8;
+}
+
+/* GALLERY */
+.gallery img {
+    width:250px;
+    margin:10px;
+    border-radius:15px;
 }
 
 /* FLOATING */
@@ -92,18 +97,16 @@ button {
     position:fixed;
     top:-20px;
     animation:fall linear infinite;
-    font-size:25px;
 }
 
 @keyframes fall {
-    to { transform: translateY(110vh); }
+    to { transform:translateY(110vh); }
 }
 
 /* FOOTER */
 footer {
     background:maroon;
     color:gold;
-    text-align:center;
     padding:20px;
 }
 </style>
@@ -114,19 +117,19 @@ footer {
 <!-- LOGIN -->
 <div id="loginPage">
     <div class="login-box">
-        <h2>💖 Welcome 💖</h2>
+        <h2>💖 Welcome Prasanna & Mani 💖</h2>
         <input type="text" id="user" placeholder="Username"><br>
         <input type="password" id="pass" placeholder="Password"><br>
         <button onclick="login()">Enter</button>
     </div>
 </div>
 
-<!-- MAIN SITE -->
+<!-- MAIN -->
 <div id="mainSite">
 
 <!-- MUSIC -->
-<audio autoplay loop>
-    <source src="https://pagalworld.com.se/files/download/id/64603" type="audio/mp3">
+<audio id="bgMusic" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_115b9b1a9d.mp3" type="audio/mp3">
 </audio>
 
 <!-- HERO -->
@@ -137,9 +140,18 @@ footer {
 </div>
 
 <!-- COUPLE -->
-<section class="couple" style="text-align:center; padding:50px;">
-    <h2>💑 A Perfect Pair</h2>
+<section class="couple">
+    <h2>💑 Made For Each Other</h2>
     <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=500">
+</section>
+
+<!-- STORY -->
+<section>
+    <h2>✨ A Beautiful Journey</h2>
+    <p style="max-width:700px;margin:auto;font-size:18px;">
+    Two hearts, two souls, one beautiful journey.  
+    This is not just a wedding, but the start of a forever filled with love and happiness.
+    </p>
 </section>
 
 <!-- MESSAGE -->
@@ -148,27 +160,32 @@ footer {
 <p>Dear Akka Prasanna & Bava Mani,</p>
 
 <p>
-Akka, you are not just my sister… you are my world, my strength, and my biggest inspiration.
-Seeing you as a bride is the most beautiful moment of my life.
+Akka, you are my strength, my guide, and my everything.
+Seeing you as a bride is the most emotional and happiest moment of my life.
 </p>
 
 <p>
-Bava, you are truly lucky… but more than that, we are lucky to have you in our family.
-You complete my Akka in the most perfect way.
+Bava, you are not just lucky… we are lucky to have you.
+You complete my Akka perfectly.
 </p>
 
 <p>
-Your love story is not just beautiful… it is magical.
-May your life be filled with endless happiness, success, laughter, and unforgettable memories.
+May your life be filled with endless love, happiness, and success.
+May every day bring new joy and beautiful memories.
 </p>
 
-<p>
-I am so proud, so emotional, and so happy for both of you.
-This is not just a wedding… it is the beginning of a beautiful forever.
-</p>
-
-<p><b>❤️ Love you forever ❤️</b><br>
+<p><b>❤️ Forever with love ❤️</b><br>
 — Anneda Raghu Vardhan Reddy</p>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section>
+<h2>📸 Memories</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500">
+<img src="https://images.unsplash.com/photo-1537634066038-aca1d26f2c62?w=500">
+<img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=500">
 </div>
 </section>
 
@@ -180,14 +197,17 @@ Made with ❤️ for Prasanna & Mani
 
 <script>
 
-/* LOGIN FUNCTION */
+/* LOGIN + MUSIC FIX */
 function login(){
-    let u=document.getElementById("user").value;
+    let u=document.getElementById("user").value.toLowerCase();
     let p=document.getElementById("pass").value;
 
-    if(u==="Prasanna and mani" && p==="352026"){
+    if(u==="prasanna and mani" && p==="352026"){
         document.getElementById("loginPage").style.display="none";
         document.getElementById("mainSite").style.display="block";
+
+        // PLAY MUSIC AFTER CLICK ✅
+        document.getElementById("bgMusic").play();
     } else {
         alert("Wrong Username or Password");
     }
@@ -195,7 +215,6 @@ function login(){
 
 /* COUNTDOWN */
 const date=new Date("May 3, 2026 18:00:00").getTime();
-
 setInterval(()=>{
     let now=new Date().getTime();
     let gap=date-now;
@@ -209,11 +228,11 @@ setInterval(()=>{
     d+" Days "+h+" Hours "+m+" Minutes "+s+" Seconds";
 },1000);
 
-/* FLOATING HEARTS & FLOWERS */
-for(let i=0;i<25;i++){
+/* FLOATING */
+for(let i=0;i<30;i++){
     let el=document.createElement("div");
     el.className="float";
-    el.innerHTML = Math.random()>0.5 ? "💖" : "🌸";
+    el.innerHTML=Math.random()>0.5?"💖":"🌸";
     el.style.left=Math.random()*100+"vw";
     el.style.animationDuration=(4+Math.random()*6)+"s";
     document.body.appendChild(el);
@@ -221,4 +240,4 @@ for(let i=0;i<25;i++){
 </script>
 
 </body>
-</html>
+</html>>

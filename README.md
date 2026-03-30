@@ -3,192 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Prasanna ❤️ Mani Wedding</title>
 
 <style>
 body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background: linear-gradient(to right, #fff8f0, #ffe6e6);
-    color: #5a0f2e;
+    margin:0;
+    font-family:'Georgia',serif;
+    overflow-x:hidden;
+}
+
+/* LOGIN PAGE */
+#loginPage {
+    height:100vh;
+    background: linear-gradient(135deg, maroon, gold);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box {
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+input {
+    padding:10px;
+    margin:10px;
+    width:200px;
+}
+
+button {
+    padding:10px 20px;
+    background:maroon;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+/* MAIN SITE */
+#mainSite {
+    display:none;
 }
 
 /* HERO */
 .hero {
-    background: linear-gradient(rgba(90,15,46,0.8), rgba(90,15,46,0.8)),
-    url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600');
-    background-size: cover;
-    text-align: center;
-    color: gold;
-    padding: 120px 20px;
+    height:100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(90,15,46,0.8)),
+    url('https://images.unsplash.com/photo-1504198453319-5ce911bafcde?w=1600');
+    background-size:cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:gold;
+    text-align:center;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    letter-spacing: 2px;
+    font-size:4rem;
 }
 
 .hero h2 {
-    font-size: 1.5rem;
+    font-size:2rem;
 }
 
-/* COUNTDOWN */
-#countdown {
-    margin-top: 20px;
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-/* SECTION */
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-/* COUPLE IMAGE */
+/* COUPLE */
 .couple img {
-    width: 300px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    margin-top: 20px;
+    width:350px;
+    border-radius:20px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
 }
 
 /* MESSAGE */
 .message {
-    background: white;
-    padding: 30px;
-    border-radius: 20px;
-    max-width: 750px;
-    margin: auto;
-    line-height: 1.8;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width:800px;
+    margin:auto;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    font-size:20px;
+    line-height:1.8;
 }
 
-/* GALLERY */
-.gallery img {
-    width: 250px;
-    margin: 10px;
-    border-radius: 15px;
-    transition: 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* FLOWERS */
-.flower {
-    position: fixed;
-    top: -10px;
-    font-size: 24px;
-    animation: fall linear infinite;
+/* FLOATING */
+.float {
+    position:fixed;
+    top:-20px;
+    animation:fall linear infinite;
+    font-size:25px;
 }
 
 @keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
+    to { transform: translateY(110vh); }
 }
 
 /* FOOTER */
 footer {
-    background: maroon;
-    color: gold;
-    padding: 15px;
+    background:maroon;
+    color:gold;
+    text-align:center;
+    padding:20px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- LOGIN -->
+<div id="loginPage">
+    <div class="login-box">
+        <h2>💖 Welcome 💖</h2>
+        <input type="text" id="user" placeholder="Username"><br>
+        <input type="password" id="pass" placeholder="Password"><br>
+        <button onclick="login()">Enter</button>
+    </div>
+</div>
+
+<!-- MAIN SITE -->
+<div id="mainSite">
+
 <!-- MUSIC -->
 <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    <source src="https://pagalworld.com.se/files/download/id/64603" type="audio/mp3">
 </audio>
 
 <!-- HERO -->
 <div class="hero">
     <h1>Prasanna ❤️ Mani</h1>
-    <h2>A Royal Wedding Celebration</h2>
-    <p id="countdown"></p>
+    <h2>Forever Begins on May 3, 2026</h2>
+    <h3 id="countdown"></h3>
 </div>
 
-<!-- COUPLE IMAGE -->
-<section class="couple">
-    <h2>💑 Made For Each Other</h2>
-    <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=500" alt="Couple Image">
+<!-- COUPLE -->
+<section class="couple" style="text-align:center; padding:50px;">
+    <h2>💑 A Perfect Pair</h2>
+    <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=500">
 </section>
 
 <!-- MESSAGE -->
 <section>
-    <h2>💌 My Heartfelt Wishes</h2>
+<div class="message">
+<p>Dear Akka Prasanna & Bava Mani,</p>
 
-    <div class="message">
-        <p>Dear Akka Prasanna & Bava Mani,</p>
+<p>
+Akka, you are not just my sister… you are my world, my strength, and my biggest inspiration.
+Seeing you as a bride is the most beautiful moment of my life.
+</p>
 
-        <p>
-        From my childhood till today, you have always been my strength, my guide,
-        and my best friend, Akka. Seeing you step into this beautiful new journey
-        fills my heart with happiness and pride.
-        </p>
+<p>
+Bava, you are truly lucky… but more than that, we are lucky to have you in our family.
+You complete my Akka in the most perfect way.
+</p>
 
-        <p>
-        Bava, thank you for coming into our family and for taking such loving care
-        of my Akka. You both truly complete each other.
-        </p>
+<p>
+Your love story is not just beautiful… it is magical.
+May your life be filled with endless happiness, success, laughter, and unforgettable memories.
+</p>
 
-        <p>
-        I wish you both endless love, happiness, success, and laughter.
-        May your life together be filled with unforgettable memories
-        and a bond that grows stronger every single day.
-        </p>
+<p>
+I am so proud, so emotional, and so happy for both of you.
+This is not just a wedding… it is the beginning of a beautiful forever.
+</p>
 
-        <p><b>❤️ Forever with love ❤️</b><br>
-        — Anneda Raghu Vardhan Reddy</p>
-    </div>
-</section>
-
-<!-- GALLERY -->
-<section>
-    <h2>📸 Beautiful Moments</h2>
-
-    <div class="gallery">
-        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500">
-        <img src="https://images.unsplash.com/photo-1537634066038-aca1d26f2c62?w=500">
-        <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=500">
-    </div>
+<p><b>❤️ Love you forever ❤️</b><br>
+— Anneda Raghu Vardhan Reddy</p>
+</div>
 </section>
 
 <footer>
-    <p>Made with ❤️ for Prasanna & Mani Wedding</p>
+Made with ❤️ for Prasanna & Mani
 </footer>
 
-<!-- COUNTDOWN -->
+</div>
+
 <script>
-const weddingDate = new Date("May 3, 2026 18:00:00").getTime();
 
-setInterval(() => {
-    const now = new Date().getTime();
-    const gap = weddingDate - now;
+/* LOGIN FUNCTION */
+function login(){
+    let u=document.getElementById("user").value;
+    let p=document.getElementById("pass").value;
 
-    const d = Math.floor(gap / (1000 * 60 * 60 * 24));
-    const h = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((gap % (1000 * 60)) / 1000);
+    if(u==="Prasanna and mani" && p==="352026"){
+        document.getElementById("loginPage").style.display="none";
+        document.getElementById("mainSite").style.display="block";
+    } else {
+        alert("Wrong Username or Password");
+    }
+}
 
-    document.getElementById("countdown").innerText =
-    `${d} Days ${h} Hours ${m} Minutes ${s} Seconds`;
-}, 1000);
+/* COUNTDOWN */
+const date=new Date("May 3, 2026 18:00:00").getTime();
 
-/* FLOWERS */
-for(let i=0;i<20;i++){
-    let flower=document.createElement("div");
-    flower.innerHTML="🌸";
-    flower.className="flower";
-    flower.style.left=Math.random()*100+"vw";
-    flower.style.animationDuration=(4+Math.random()*6)+"s";
-    document.body.appendChild(flower);
+setInterval(()=>{
+    let now=new Date().getTime();
+    let gap=date-now;
+
+    let d=Math.floor(gap/(1000*60*60*24));
+    let h=Math.floor((gap%(1000*60*60*24))/(1000*60*60));
+    let m=Math.floor((gap%(1000*60*60))/(1000*60));
+    let s=Math.floor((gap%(1000*60))/1000);
+
+    document.getElementById("countdown").innerHTML=
+    d+" Days "+h+" Hours "+m+" Minutes "+s+" Seconds";
+},1000);
+
+/* FLOATING HEARTS & FLOWERS */
+for(let i=0;i<25;i++){
+    let el=document.createElement("div");
+    el.className="float";
+    el.innerHTML = Math.random()>0.5 ? "💖" : "🌸";
+    el.style.left=Math.random()*100+"vw";
+    el.style.animationDuration=(4+Math.random()*6)+"s";
+    document.body.appendChild(el);
 }
 </script>
 

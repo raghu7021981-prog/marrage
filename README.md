@@ -187,7 +187,6 @@ May every day bring new joy and beautiful memories.
 </section>
 
 <!-- GALLERY -->
-<!-- GALLERY -->
 <section>
 <h2>📸 Memories</h2>
 
@@ -196,8 +195,8 @@ May every day bring new joy and beautiful memories.
 <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500">
 
 <!-- YOUR IMAGE (center highlight) -->
-<img src="your-image.png" style="width:300px; border:4px solid gold;">
-
+<!-- YOUR IMAGE --> 
+<img src="couple.png">
 </div>
 
 </section>

@@ -70,9 +70,8 @@ section {
 
 /* COUPLE */
 .couple img {
-    width:350px;
     border-radius:20px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+    box-shadow:0 0 30px gold;
 }
 
 /* MESSAGE */
@@ -180,15 +179,20 @@ May every day bring new joy and beautiful memories.
 </section>
 
 <!-- GALLERY -->
+<!-- GALLERY -->
 <section>
 <h2>📸 Memories</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500">
-<img src="https://images.unsplash.com/photo-1537634066038-aca1d26f2c62?w=500">
-<img src="https://images.unsplash.com/photo-1529636798458-92182e662485?w=500">
-</div>
-</section>
 
+<div class="gallery" style="display:flex; justify-content:center; flex-wrap:wrap;">
+
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500">
+
+<!-- YOUR IMAGE (center highlight) -->
+<img src="your-image.png" style="width:300px; border:4px solid gold;">
+
+</div>
+
+</section>
 <footer>
 Made with ❤️ for Prasanna & Mani
 </footer>
